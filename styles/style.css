@@ -1,0 +1,314 @@
+body, html {
+    height: 100%;
+}
+
+body {
+	background-color: black;
+	font-family: 'Dosis', sans-serif;
+}
+
+nav a {
+	font-size: 1.2em;
+}
+
+header {
+	width: 100%;
+    height: 200px;
+    position: relative;
+}
+
+#title {
+	width: 100%;
+	top: 50%;
+	position: absolute;
+    transform: translateY(-50%);
+    text-align: center;
+    color: white;
+    padding: 10px;
+}
+
+#title h1 {
+	font-size: 2em;
+}
+
+#title h2 {
+	font-size: 1.2em;
+}
+
+#background {
+	width: 100%;
+    height: 100%;
+    position: absolute;
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+    background-size: 100%;
+    filter: brightness(50%);
+}
+
+main {
+	padding: 10px;
+	overflow: scroll;
+	font-size: 1em;
+}
+
+main h2 {
+	text-align: center;
+	padding: 10px;
+	font-size: 2em;
+}
+
+main h3 {
+	text-align: center;
+	padding: 10px;
+	font-size: 1.5em;
+}
+
+article {
+	padding: 5px;
+	margin: 5px;
+	background-color: rgb(245, 245, 245);
+}
+
+main table thead th {
+	text-align: center;
+}
+
+main table li {
+	margin-left: -25px;
+}
+
+time {
+	white-space: nowrap;
+}
+
+main .cover-photo {
+	width: 100%;
+	padding: 10px;
+}
+
+main .card {
+	padding: 5px;
+	margin: 5px;
+	border: 2px solid rgb(240, 240, 240);
+	background-color: rgb(245, 245, 245);
+	text-align: center;
+}
+
+main .card h3 {
+	text-align: center;
+	font-size: 1.6em;
+}
+
+main .card .frame-container {
+	height: 300px;
+	position: relative;
+	overflow: hidden;
+}
+
+main .card .frame {
+	width: 200px;
+	height: 200px;
+	position: absolute;
+	top: 50px;
+	left: 50%;
+	margin-left: -100px;
+	transform: rotate(45deg);
+	outline: 120px solid rgb(245, 245, 245);
+	transition: 0.3s;
+}
+
+main .card .frame-container:hover .frame {
+	width: 300px;
+	height: 300px;
+	top: 0;
+	margin-left: -150px;
+	transform: rotate(0deg);
+	transition: 0.3s;
+}
+
+main .card .frame-container img {
+	width: 280px;
+	height: 280px;
+	margin: 10px auto;
+	object-fit: cover;
+}
+
+main .gallery .image {
+	margin: 15px 0;
+	transition: 0.3s;
+	filter: brightness(100%);
+}
+
+main .gallery .image:hover {
+	transition: 0.3s;
+	filter: brightness(50%);
+}
+
+main .profile {
+	padding: 5px;
+	margin: 5px;
+	border: 2px solid rgb(240, 240, 240);
+	background-color: rgb(245, 245, 245);
+}
+
+main .profile img {
+	display: block;
+	margin: 10px auto;
+	width: 200px;
+	height: 300px;
+	object-fit: cover;
+}
+
+main .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+main .jackrabbit {
+	text-align: center;
+}
+
+main .jackrabbit a {
+	display: block;
+	padding: 15px;
+	margin: 5px;
+}
+
+footer {
+	padding: 20px;
+	background-color: black;
+	text-align: center;
+	color: white;
+}
+
+footer img {
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	filter: grayscale(100%);
+}
+
+footer img:hover {
+	transition: 0.3s;
+	filter: grayscale(0);
+}
+
+footer a {
+	display: inline-block;
+	margin: 20px 30px;
+}
+
+
+@media (min-width: 576px) {
+	header {
+	    height: 300px;
+	}
+
+	#title h1 {
+		font-size: 3em;
+	}
+
+	#title h2 {
+		font-size: 1.4em;
+	}
+}
+
+@media (min-width: 768px) {
+	nav a {
+		font-size: 1.4em;
+	}
+
+	header {
+	    height: 400px;
+	}
+
+	#title h1 {
+		font-size: 4em;
+	}
+
+	#title h2 {
+		font-size: 1.6em;
+	}
+
+	main .profile img {
+		float: left;
+		margin: 10px;
+	}
+
+	main {
+		font-size: 1.3em;
+	}
+
+	main h2 {
+		text-align: left;
+		font-size: 2.5em;
+	}
+
+	main h3 {
+		text-align: left;
+		font-size: 2em;
+	}
+}
+
+@media (min-width: 992px) {
+	nav a {
+		font-size: 1.6em;
+	}
+
+	header {
+		height: 500px;
+	}
+
+	nav li {
+		margin: 0 12px;
+	}
+
+	#title h1 {
+		font-size: 5em;
+	}
+
+	#title h2 {
+		font-size: 1.8em;
+	}
+
+	#background {
+		background-attachment: fixed;
+	}
+}
+
+@media (min-width: 1200px) {
+	nav a {
+		font-size: 1.8em;
+	}
+
+	nav li {
+		margin: 0 20px;
+	}
+
+	header {
+		height: 600px;
+	}
+
+	#title h1 {
+		font-size: 6.5em;
+	}
+
+	#title h2 {
+		font-size: 2.5em;
+	}
+}
+
+@media (min-width: 1500px) {
+	header {
+		height: 700px;
+	}
+}
+
+@media (min-width: 2000px) {
+	header {
+		height: 800px;
+	}
+}
+
+

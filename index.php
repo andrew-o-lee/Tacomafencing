@@ -7,7 +7,7 @@
 		<meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
 
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-		<link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 		<link rel='stylesheet' href='styles/style.css'>
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -39,15 +39,11 @@
 									),
 									array(
 										'page' => 'staff',
-										'display_text' => "Staff"
+										'display_text' => "Coaches"
 									),
 									array(
 										'page' => 'ourfencers',
 										'display_text' => "Our Fencers"
-									),
-									array(
-										'page' => 'schedule',
-										'display_text' => "Schedule"
 									)
 								),
 								'display_text' => "About"
@@ -64,26 +60,23 @@
 									),
 									array(
 										'page' => 'competitivefoil',
-										'display_text' => "Competitive Foil"
-									),
-									array(
-										'page' => 'epee',
-										'display_text' => "Epee"
-									),
-									array(
-										'page' => 'sabre',
-										'display_text' => "Sabre"
+										'display_text' => "Intermediate and Advanced"
 									)
 								),
 								'display_text' => "Programs"
 							),
 							array(
-								'page' => 'membership',
-								'display_text' => "Membership"
-							),
-							array(
-								'page' => 'summer2018',
-								'display_text' => "Summer 2018"
+								'dropdown_items' => array(
+									array(
+										'page' => 'fees',
+										'display_text' => "Fees"
+									),
+									array(
+										'page' => 'schedule',
+										'display_text' => "Schedule"
+									)
+								),
+								'display_text'=> "Fees and Schedule"
 							),
 							array(
 								'page' => 'gallery',
@@ -120,46 +113,51 @@
 		</nav>
 		
 		<header>
-			<div id='background'></div>
-			<div id='title'>
-				<h1>Metro Tacoma Fencing Club</h1>
-				<h2>The Home of Sport Fencing in the South Puget Sound</h2>
-			</div>
+			<a href='?page=home'>
+				<div id='background'></div>
+				<div id='title'>
+					<h1>Metro Tacoma Fencing Club</h1>
+					<h2>The Home of Sport Fencing in the South Puget Sound</h2>
+				</div>
+			</a>
 		</header>
 
 		<script>
-			<?php
-				$backgrounds = scandir('images/backgrounds/');
-				$valid_extensions = array('.png', '.jpeg', '.jpg');
+			$(function() {
+				<?php
+					$backgrounds = scandir('images/backgrounds/');
+					$valid_extensions = array('.png', '.jpeg', '.jpg');
 
-				echo "var background_images = [";
-				for ($i = 0; $i < count($backgrounds); $i++) {
-					if (in_array(strstr($backgrounds[$i], '.'), $valid_extensions)) {
-						echo "'$backgrounds[$i]', ";
+					echo "var background_images = [";
+					for ($i = 0; $i < count($backgrounds); $i++) {
+						if (in_array(strstr($backgrounds[$i], '.'), $valid_extensions)) {
+							echo "'$backgrounds[$i]', ";
+						}
 					}
+					echo "];";
+				?>
+
+				var index = Math.floor(Math.random() * background_images.length);
+
+				function newBackground() {
+					index++;
+					if(index > background_images.length - 1) {
+						index = 0;
+					}
+					$('#background').hide();
+					$('#background').css('background-image', 'url(images/backgrounds/' + background_images[index] + ')');
+					$('#background').fadeIn(700);
 				}
-				echo "];";
-			?>
 
-			var index = Math.floor(Math.random() * background_images.length);
+				newBackground();
 
-			function newBackground() {
-				index++;
-				if(index > background_images.length - 1) {
-					index = 0;
-				}
-				$('#background').css('background-image', 'url(images/backgrounds/' + background_images[index] + ')');
-				$('#background').fadeIn(700);
-			}
-
-			newBackground();
-
-			setInterval(function() {
-				$('#background').fadeOut(700, newBackground)
-			}, 7000);
+				setInterval(function() {
+					$('#background').fadeOut(700, newBackground)
+				}, 7000);
+			});
 		</script>
 
-		<main class='container-fluid bg-light'>
+		<main id='main' class='container-fluid bg-light'>
 			<div class='container'>
 				<?php 
 					require 'helpers.php';
@@ -169,15 +167,24 @@
 		</main>
 
 		<footer class='container-fluid'>
-			<div class='container'>
-				<a href='https://www.facebook.com/Metro-Tacoma-Fencing-Club-179585682221/' target='_blank'>
-					<img src='images/thumbnails/facebooklogo.png'>
-				</a>
-				<a href='https://www.instagram.com/metrotacomafencing/' target='_blank'>
-					<img src='images/thumbnails/instagramlogo.png'>
-				</a>
+			<div id='sns' class='row'>
+				<div class='col'>
+					<a class='float-right' href='https://www.facebook.com/Metro-Tacoma-Fencing-Club-179585682221/' target='_blank'>
+						<img src='images/thumbnails/facebooklogo.png'>
+					</a>
+				</div>
+				<div class='col'>
+					<a class='float-left' href='https://www.instagram.com/metrotacomafencing/' target='_blank'>
+						<img src='images/thumbnails/instagramlogo.png'>
+					</a>
+				</div>
 			</div>
-			info@tacomafencing.com | 8629 S Tacoma Way Lakewood, WA 98499 | Monday-Friday <time>4:00 PM</time>-<time>9:00 PM</time>, Saturday <time>8:30 AM</time>-<time>10:30 AM</time>
+			<div id='footer-text'>
+				<a href="mailto:info@tacomafencing.com">info@tacomafencing.com</a>
+				<a target='_blank' href='https://www.google.com/maps/dir/?api=1&destination=Metro+Tacoma+Fencing+Club&destination_place_id=ChIJe-c1YlEAkVQR-WRb3aiVIWg&travelmode=driving'>8629 S Tacoma Way Lakewood, WA 98499</a>
+				<a href="tel:253-584-1986">Phone 253 584 1986</a>
+				<a href='?page=schedule'>Monday-Friday <time>4:00 PM</time> - <time>9:00 PM</time>, Saturday <time>8:30 AM</time> - <time>10:30 AM</time></a>
+			</div>
 		</footer>
 
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>

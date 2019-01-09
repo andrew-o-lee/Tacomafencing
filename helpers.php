@@ -11,35 +11,46 @@
 
 	function isCached($key) {
 		if (file_exists("cache/$key")) {
-			return time() - filemtime("cache/$key") < 3600;
+			return time() - filemtime("cache/$key") < 86400;
 		}
 		return false;
 	}
 
 	function makeCards($cards) {
 		foreach ($cards as $card) {
+			$target = in_array('_blank', $card) ? '_blank' : '';
 			echo "<div class='col-lg'><div class='card container'>";
 			echo "<h3>$card[title]</h3>";
-			echo "<a href='$card[url]'><div class='frame-container container'><div class='frame'></div><img src='images/thumbnails/$card[image]'></div></a>";
+			echo "<a target='$target' href='$card[url]'><div class='frame-container container'><div class='frame'></div><img src='images/thumbnails/$card[image]'></div></a>";
 			echo "<p>$card[description]</p>";
-			echo "<a href='$card[url]' class='btn btn-dark'>Learn More</a></div></div>";
+			echo "<a target='$target' href='$card[url]' class='btn btn-dark'>Learn More</a></div></div>";
 		}
 	}
 
-	function makeProfiles($people) {
-		$gordita = 0;
+	$k = 0;
+	function makeProfiles($people, $profiles_per_row) {
+		global $k;
+		$i = 0;
 		foreach ($people as $person) {
-			echo "<div class='profile clearfix'>";
+			if ($i % $profiles_per_row == 0) {
+				echo "<div class='row'>";
+			}
+			echo "<div class='profile clearfix col-lg'>";
 			if ($person['quesadilla']) {
 				echo 
-					"<script>var chalupa$gordita = document.createElement('audio'); chalupa$gordita.src = 'images/portraits/taco/$person[burrito]'; enchilada$gordita = document.createElement('img'); enchilada$gordita.src = 'images/portraits/taco/$person[quesadilla]'; function tortilla$gordita(obj) {chalupa$gordita.play(); obj.src = enchilada$gordita.src; setTimeout(function() {obj.src = 'images/portraits/$person[image]';}, chalupa$gordita.duration * 1000);}</script>";
-				echo "<img src='images/portraits/$person[image]' onclick='tortilla$gordita(this)'>";
-				$gordita++;
+					"<script>var chalupa$k = document.createElement('audio'); chalupa$k.src = 'images/portraits/taco/$person[burrito]'; enchilada$k = document.createElement('img'); enchilada$k.src = 'images/portraits/taco/$person[quesadilla]'; function tortilla$k(obj) {chalupa$k.play(); obj.src = enchilada$k.src; setTimeout(function() {obj.src = 'images/portraits/$person[image]';}, chalupa$k.duration * 1000);}</script>";
+				echo "<img id='profilePhoto$k' src='images/loading.gif' onclick='tortilla$k(this)'>";
 			} else {
-				echo "<img src='images/portraits/$person[image]'>";
+				echo "<img id='profilePhoto$k' src='images/loading.gif'>";
 			}
 			echo "<article><p>$person[bio]</p></article>";
 			echo "</div>";
+			echo "<script>\$(function() {\$.ajax({url: 'images/portraits/$person[image]'}).done(function() {\$('#profilePhoto$k').hide(); \$('#profilePhoto$k').attr('src', 'images/portraits/$person[image]'); \$('#profilePhoto$k').fadeIn(400);});});</script>";
+			if ($i % $profiles_per_row == $profiles_per_row - 1) {
+				echo "</div>";
+			}
+			$k++;
+			$i++;
 		}
 	}
 

@@ -3,7 +3,7 @@
 
 <img src='images/cover/campflyer.jpg' class='cover-photo'>
 
-<h3>MTFC is hosting 3 different training camps this summer. Sign up to reserve your spot!</h3>
+<h3>MTFC is hosting 3 different training camps this summer. Sign up to reserve your spot! </h3>
 
 <hr>
 

@@ -4,7 +4,7 @@ body, html {
 
 body {
 	background-color: black;
-	font-family: 'Dosis', sans-serif;
+	font-family: 'roboto', sans-serif;
 }
 
 nav a {
@@ -84,64 +84,87 @@ time {
 main .cover-photo {
 	width: 100%;
 	padding: 10px;
+	border: 1px solid rgb(245, 245, 245);
 }
 
 main .card {
-	padding: 5px;
+	padding: 15px;
 	margin: 5px;
-	border: 2px solid rgb(240, 240, 240);
-	background-color: rgb(245, 245, 245);
+	border: 2px solid rgb(200, 200, 200);
+	background-color: rgb(245, 245, 255);
 	text-align: center;
 }
 
 main .card h3 {
 	text-align: center;
-	font-size: 1.6em;
+	font-size: 1.4em;
 }
 
 main .card .frame-container {
-	height: 300px;
+	height: 280px;
 	position: relative;
 	overflow: hidden;
 }
 
 main .card .frame {
-	width: 200px;
-	height: 200px;
 	position: absolute;
-	top: 50px;
-	left: 50%;
-	margin-left: -100px;
-	transform: rotate(45deg);
-	outline: 120px solid rgb(245, 245, 245);
-	transition: 0.3s;
-}
-
-main .card .frame-container:hover .frame {
-	width: 300px;
-	height: 300px;
-	top: 0;
-	margin-left: -150px;
-	transform: rotate(0deg);
-	transition: 0.3s;
+	top: 50%;
+	left: 50%;	
+	width: 260px;
+	height: 260px;
+	margin-top: -130px; /* half of width */
+	margin-left: -130px; /* half of height */
+	border: 2px solid rgb(200, 200, 200);
+	outline: 200px solid rgb(245, 245, 255);
+	z-index: 2;
 }
 
 main .card .frame-container img {
-	width: 280px;
-	height: 280px;
-	margin: 10px auto;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 260px;
+	height: 260px;
+	margin-top: -130px;
+	margin-left: -130px;
 	object-fit: cover;
+	z-index: 1;
 }
 
-main .gallery .image {
+main .gallery .frame {
+	position: relative;
+}
+
+main .gallery .label {
+	position: absolute;
+	left: 0;
+	top: 45%;
+	width: 100%;
+	text-align: center;
+	font-size: 2em;
+	color: rgb(230, 230, 230);
+	opacity: 0;
+	transition: 0.3s;
+	z-index: 2;
+}
+
+main .gallery .photo {
+	width: 100%;
+	padding-top: 100%;
+	background: url(../images/loading.gif) rgb(200, 200, 200);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 	margin: 15px 0;
 	transition: 0.3s;
-	filter: brightness(100%);
 }
 
-main .gallery .image:hover {
-	transition: 0.3s;
+main .gallery .frame:hover .photo {
 	filter: brightness(50%);
+}
+
+main .gallery .frame:hover .label {
+	opacity: 1.0;
 }
 
 main .profile {
@@ -157,6 +180,7 @@ main .profile img {
 	width: 200px;
 	height: 300px;
 	object-fit: cover;
+	background-color: rgb(200, 200, 200)
 }
 
 main .clearfix::after {
@@ -175,30 +199,42 @@ main .jackrabbit a {
 	margin: 5px;
 }
 
-footer {
-	padding: 20px;
-	background-color: black;
+main .button-link {
 	text-align: center;
-	color: white;
 }
 
-footer img {
-	display: inline-block;
+main .button-link a {
+	display: block;
+	padding: 15px;
+	margin: 5px;
+}
+
+footer {
+	padding: 40px;
+	background-color: black;
+	text-align: center;
+}
+
+footer #sns img {
 	width: 40px;
 	height: 40px;
 	filter: grayscale(100%);
 }
 
-footer img:hover {
+footer #sns a {
+	margin: 10px 20px;
+}
+
+footer #footer-text a {
+	color: white;
+	padding: 10px;
+	display: inline-block;
+}
+
+footer #sns img:hover {
 	transition: 0.3s;
 	filter: grayscale(0);
 }
-
-footer a {
-	display: inline-block;
-	margin: 20px 30px;
-}
-
 
 @media (min-width: 576px) {
 	header {
@@ -211,6 +247,31 @@ footer a {
 
 	#title h2 {
 		font-size: 1.4em;
+	}
+
+	main .card .frame-container {
+		height: 340px;
+	}
+
+	main .card .frame {
+		width: 230px;
+		height: 230px;
+		margin-top: -115px; /* half of width */
+		margin-left: -115px; /* half of height */
+		transform: rotate(45deg);
+		transition: 0.15s;
+	}
+
+	main .card .frame-container:hover .frame {
+		transform: rotate(0deg);
+	}
+
+	main .card .frame-container:hover .frame,
+	main .card .frame-container img {
+		width: 320px;
+		height: 320px;
+		margin-top: -160px;
+		margin-left: -160px;
 	}
 }
 
@@ -233,11 +294,11 @@ footer a {
 
 	main .profile img {
 		float: left;
-		margin: 10px;
+		margin: 10px 15px 5px 10px;
 	}
 
 	main {
-		font-size: 1.3em;
+		font-size: 1.2em;
 	}
 
 	main h2 {
@@ -248,6 +309,29 @@ footer a {
 	main h3 {
 		text-align: left;
 		font-size: 2em;
+	}
+
+	main .card .frame-container {
+		height: 400px;
+	}
+
+	main .card .frame {
+		width: 270px;
+		height: 270px;
+		margin-top: -135px; /* half of width */
+		margin-left: -135px; /* half of height */
+	}
+
+	main .card .frame-container:hover .frame,
+	main .card .frame-container img {
+		width: 380px;
+		height: 380px;
+		margin-top: -190px;
+		margin-left: -190px;
+	}
+
+	main .gallery .label {
+		font-size: 1em;
 	}
 }
 
@@ -275,6 +359,29 @@ footer a {
 	#background {
 		background-attachment: fixed;
 	}
+
+	main .card .frame-container {
+		height: 280px;
+	}
+
+	main .card .frame {
+		width: 180px;
+		height: 180px;
+		margin-top: -90px; /* half of width */
+		margin-left: -90px; /* half of height */
+	}
+
+	main .card .frame-container:hover .frame,
+	main .card .frame-container img {
+		width: 250px;
+		height: 250px;
+		margin-top: -125px;
+		margin-left: -125px;
+	}
+
+	main .gallery .label {
+		font-size: 1.5em;
+	}
 }
 
 @media (min-width: 1200px) {
@@ -297,11 +404,34 @@ footer a {
 	#title h2 {
 		font-size: 2.5em;
 	}
+
+	main .card .frame-container {
+		height: 340px;
+	}
+
+	main .card .frame {
+		width: 220px;
+		height: 220px;
+		margin-top: -110px; /* half of width */
+		margin-left: -110px; /* half of height */
+	}
+
+	main .card .frame-container:hover .frame,
+	main .card .frame-container img {
+		width: 300px;
+		height: 300px;
+		margin-top: -150px;
+		margin-left: -150px;
+	}
 }
 
 @media (min-width: 1500px) {
 	header {
 		height: 700px;
+	}
+
+	main .gallery .label {
+		font-size: 2em;
 	}
 }
 

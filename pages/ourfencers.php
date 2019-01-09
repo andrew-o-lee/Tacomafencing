@@ -3,6 +3,7 @@
 
 <article>
 	<p>Metro Tacoma Fencing Club (MTFC) has had a number of fencers who have been successful at this sport. Our members participate in fencing recreationally, compete in tournaments locally, and even take it to national and international levels. We want to celebrate the hours of hard work and success of a number of our fencers and their families who have done well nationally and internationally. It takes a village to develop a highly skilled athlete with a lot of support from dedicated family, hard working teammates, generous club volunteers, and patient coaches.</p>
+	<p>National medals are traditionally awarded to the top 8 finishers in an event. National events draw the very top fencers from the United States as well as from some other countries and can be as large as 400 fencers competing.</p>
 </article>
 
 <hr>
@@ -11,6 +12,30 @@
 
 <?php
 	makeProfiles(array(
+		array(
+			'image' => 'ketkiNovNACCDT2018.jpg',
+			'bio' => "Ketki Ketkar 3rd place cadet (U17) women's épée at the November North American Cup (NAC) 2018, Kansas City, MO. Coach Jisun Kim."
+		),	
+		array(
+			'image' => 'ketkiNovNACY142018.jpg',
+			'bio' => "Ketki Ketkar 6th place Y14 women's épée at the November North American Cup (NAC) 2018, Kansas City, MO. Coach Jisun Kim."
+		),	
+		array(
+			'image' => 'benjaminNovNAC2018.jpg',
+			'bio' => "Benjamin Lee 8th place junior (U20) men's foil at the November North American Cup (NAC) 2018, Kansas City, MO. Coach Kwangsuk Chung."
+		),	
+		array(
+			'image' => 'ketkiNovNACjr2018.jpg',
+			'bio' => "Ketki Ketkar 6th place junior (U20) women's épée at the November North American Cup (NAC) 2018, Kansas City, MO. Coach Jisun Kim."
+		),	
+		array(
+			'image' => 'ketkiOctNAC2018.jpg',
+			'bio' => "Ketki Ketkar 8th place cadet (U17) women's épée at the October North American Cup (NAC) 2018, Milwaukee, WI. Coach Kwangsuk Chung."
+		),	
+		array(
+			'image' => 'tobysummer2018.jpg',
+			'bio' => "Tobias Lee 6th place veteran (Vet40) men's épée at the Summer National Championships 2018, St Louis, MO. Coach Andrew Lee."
+		),
 		array(
 			'image' => 'gracie2018aprilNAC.jpg',
 			'bio' => "Gracie Kim 8th place division 3 women's foil at the April North American Cup (NAC) 2018, Richmond, VA. Coach Kwangsuk Chung."
@@ -93,13 +118,13 @@
 		),
 		array(
 			'image' => 'andrewsummer2015.jpg',
-			'bio' => "Andrew Lee 7th place Cadet (U17) men's épée at the Summer National North American Cup (NAC) 2015, San Jose, CA. Coach Dana Sanford."
+			'bio' => "Andrew Lee 7th place cadet (U17) men's épée at the Summer National North American Cup (NAC) 2015, San Jose, CA. Coach Dana Sanford."
 		),
 		array(
 			'image' => 'benjamin2012.jpg',
 			'bio' => "Benjamin Lee 3rd place Y10 men's foil at the Summer National North American Cup (NAC) 2012, Anaheim, CA. Coach Tobias Lee."
 		)
-	));
+	), 2);
 ?>
 
 <hr>
@@ -124,5 +149,5 @@
 			'image' => 'andrewcopenhagen2015.jpg',
 			'bio' => "Andrew Lee Cadet Designated European Cup 2015, Cadet (U17) men's épée, Team USA, Copenhagen, Denmark. Coach Dana Sanford."
 		)
-	));
+	), 2);
 ?>

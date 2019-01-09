@@ -6,7 +6,7 @@
 
 	<p>MTFC is an 501(c)3 tax exempt organization with a core mission to foster national and international amateur sports competition by supporting and developing amateur athletes for national and international amateur fencing competitions in accordance with the Internal Revenue Code.</p>
 
-	<p>We offer foil, epee and sabre modern fencing. MTFC is affiliated with the Western Washington Division of the United States Fencing Association (USFA). Our coaches are qualified instructors in all three fencing sport weapons.</p>
+	<p>We offer foil, epee, and sabre modern fencing. MTFC is affiliated with the Western Washington Division of USA Fencing. Our coaches are qualified instructors in all three fencing sport weapons.</p>
 </article>
 
 <hr>
@@ -15,22 +15,24 @@
 	<?php 
 		makeCards(array(
 			array(
-				'title' => "Our Coaches and Staff",
-				'image' => 'dana.png',
+				'title' => "Directions",
+				'image' => 'googoollymaps.png',
+				'url' => 'https://www.google.com/maps/dir/?api=1&destination=Metro+Tacoma+Fencing+Club&destination_place_id=ChIJe-c1YlEAkVQR-WRb3aiVIWg&travelmode=driving',
+				'description' => "",
+				'_blank'
+			),
+			array(
+				'title' => "Our Coaches",
+				'image' => 'dana.jpg',
 				'url' => '?page=staff',
 				'description' => ""
 			),
 			array(
-				'title' => "Hall of Fame",
-				'image' => 'halloffame.png',
+				'title' => "Our Fencers",
+				'image' => 'halloffame.jpg',
 				'url' => '?page=ourfencers',
-				'description' => ""
-			),
-			array(
-				'title' => "Our Programs",
-				'image' => 'jake.png',
-				'url' => '?page=overview',
 				'description' => ""
 			)
 		));
-
+	?>
+</div>

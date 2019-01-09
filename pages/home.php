@@ -10,35 +10,37 @@
 <h3>Location and Hours</h3>
 
 <article>
-	<p>We are located at 8629 S Tacoma Way Lakewood, WA 98499 (right next to Olympus Women's Health Club). We are open <time>4:00 PM</time>-<time>9:00 PM</time> Monday through Friday and <time>8:30 AM</time>-<time>10:30 AM</time> on Saturdays.</p>
+	<p>We are located at 8629 S Tacoma Way Lakewood, WA 98499 (right next to Olympus Women's Health Club). </p>
 
-	<p>At Metro Tacoma Fencing Club, visitors are always welcome.</p>
+	<p> We are open <time>4:00 PM</time>-<time>9:00 PM</time> Monday through Friday and <time>8:30 AM</time>-<time>10:30 AM</time> on Saturdays.</p>
+	
+	<p>At Metro Tacoma Fencing Club, visitors are always welcome. Email us at <a href="mailto:info@tacomafencing.com">info@tacomafencing.com</a> or call <a href="tel:253-584-1986">253 584 1986</a>.</p>
 </article>
 
 <hr>
-
-<h3>Program Offerings</h3>
 
 <div class='row'>
 	<?php 
 		makeCards(array(
 			array(
-				'title' => "Summer Camp 2018",
-				'url' => '?page=summer2018',
-				'image' => 'prenac.png',
-				'description' => "August 15-17, <time>10:00 AM</time>-<time>12:30 PM</time> <br>Tournament August 18, <time>10:30 AM</time><br>Cost: $150"
+				'title' => "About Us",
+				'image' => 'prenac.jpg',
+				'url' => '?page=aboutus',
+				'description' => "",
+				'_blank'
 			),
 			array(
 				'title' => "Beginner Programs",
+				'image' => 'camp.jpg',
 				'url' => '?page=beginnerprograms',
-				'image' => 'nicholas.png',
-				'description' => "Introduction to Foil: Tuesday/Thursday, <time>6:30 PM</time>-<time>7:30 PM</time><br>Introduction to Epee: Tuesday, <time>6:30 PM</time>-<time>7:30 PM</time><br>Introduction to Fencing: Saturday, <time>8:30 AM</time>-<time>10:30 AM</time>"
+				'description' => ""
 			),
 			array(
-				'title' => "Competitive Programs",
-				'url' => '?page=competitivefoil',
-				'image' => 'chung.png',
-				'description' => "Year round programs designed to provide appropriate training for fencers who wish to compete in fencing tournaments." 
+				'title' => "Beginner Fencers' Guide",
+				'image' => 'clee2018.jpg',
+				'url' => 'http://www.tacomafencing.com/documents/beginnerfencersguide.pdf',
+				'description' => "",
+				'_blank'
 			)
 		));
 	?>

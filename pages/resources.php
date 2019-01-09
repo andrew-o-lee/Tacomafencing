@@ -4,7 +4,7 @@
 <h3>MTFC Documents and Forms</h3>
 
 <article>
-	<p><a target='_blank' href='documents/beginnerfencersguide.pdf'>Beginner Fencers’ Guide (V5.1)</a> written by coach Toby Lee is available to help guide you through the sport of fencing in detail.</p>
+	<p><a target='_blank' href='documents/beginnerfencersguide.pdf'>Beginner Fencers’ Guide</a> written by coach Toby Lee is available to help guide you through the sport of fencing in detail.</p>
 
 	<p><a target='_blank' href='documents/volunteer-hour-record.pdf'>Volunteer Hour Record</a> Keep track of volunteer hours and submit</p>
 
@@ -18,9 +18,10 @@
 <h3>Useful Links</h3>
 
 <article>
-	<p><a target='_blank' href='http://www.usafencing.org'>USA Fencing</a>. National Governing Body for USA fencing. Everyone at the club must have at minimum a non-competitive membership ($10). To participate in any sanctioned tournaments, must become a competitive member ($70) for the season.  Membership information is <a target='_blank' href='http://www.usafencing.org/membership'>here</a>.</p>
+	<p><a target='_blank' href='http://www.usafencing.org'>USA Fencing</a>. National Governing Body for USA fencing. Everyone at the club must have at minimum a non-competitive membership ($10). To participate in any sanctioned tournaments, must become a competitive member ($75) for the season.  Membership information is <a target='_blank' href='http://www.usafencing.org/membership'>here</a>.</p>
 
 	<p><a target='_blank' href='https://askfred.net'>Askfred</a> Sign up for tournaments here. Results are also posted here.</p>
+	<p><a target='_blank' href='https://member.usafencing.org/search/tournaments'> USA Fencing Tournament Browser</a> Sign up for regional and National tournaments here. </p>
 </article>
 
 <hr>
@@ -28,7 +29,7 @@
 <h3>Equipment vendors</h3>
 
 <article>
-	<p><a target='_blank' href='http://stores.thefencingpost.com'>The Fencing Post</a> All your equipment needs available at different price points. Our club will often do bulk orders so watch for sign up sheets.</p>
+	<p><a target='_blank' href='http://stores.thefencingpost.com'>The Fencing Post</a> All your equipment needs available at different price points. </p>
 
 	<p><a target='_blank' href='https://www.leonpaul.com'>Leon Paul London</a> and <a target='_blank' href='https://www.leonpaulusa.com'>Leon Paul USA</a> More expensive but top quality brand. With the current state of the British pound, it may be more economical to purchase from London store than from US store even with the added shipping.</p>
 	
@@ -36,7 +37,7 @@
 
 	<p><a target="_blank" href="http://nwfencing.org/information/pro-shop/">Northwest Fencing Center</a> in Beaverton, Oregon has Leon Paul equipment available for sale.</p>
 
-	<p><a target="_blank" href="http://www.blue-gauntlet.com/">Blue Gauntlet Fencing</a> and <a target="_blank" href="http://www.absolutefencinggear.com/shopping/">Absolute Fencing Gear</a>have beginner sets as well as other equipment.</p>
+	<p><a target="_blank" href="http://www.blue-gauntlet.com/">Blue Gauntlet Fencing</a> and <a target="_blank" href="http://www.absolutefencinggear.com/shopping/">Absolute Fencing Gear</a> have beginner sets as well as other equipment.</p>
 	
 </article>
 
@@ -67,7 +68,7 @@
 <article>
 	<p><a target='_blank' href='http://fie.org'>FIE</a> International Fencing Federation The world governing body of fencing</p>
 
-	<p><a target='_blank' href='http://fencing.ca'>Candian Fencing Federation</a></p>
+	<p><a target='_blank' href='http://fencing.ca'>Canadian Fencing Federation</a></p>
 
 	<p><a target='_blank' href='http://www.eurofencing.info'>European Fencing Confederation</a></p>
 </article>
@@ -81,6 +82,10 @@
 
 	<p><a target='_blank' href='http://www.refereescommission.org/blog/'>US Fencing Referees' Commission</a></p>
 
+	<div id='unagi'></div>
+
+	<p><span class='btn-link text-primary' onclick='udon()'>Magic Cat</span></p>
+
 	<style>
 		.btn-link:hover {
 			text-decoration: underline;
@@ -88,17 +93,42 @@
 		}
 
 		#unagi {
-			width: 280px;
+			width: 400px;
 			height: 300px;
-			background-image: url('images/portraits/taco/cat.png');
+			background-image: url('images/portraits/taco/nyan.png');
 			position: fixed;
 			top: 20%;
-			left: -280px;
+			left: -400px;
 			display: none;
 		}
 	</style>
 
-	<p><span class='btn-link text-primary' onclick='udon()'>Magic Cat</span></p>
+	<script>
+		var tempura = true;
+		function udon() {
+			if(tempura) {
+				tempura = false;
+				$('#unagi').css('display', 'block');
+				var soba = 4800;
+				var miso = -400;
+				var ikura = setInterval(function() {
+					$('#unagi').css('background-position', soba + 'px 0');
+					$('#unagi').css('left', miso + 'px');
+					soba -= 400;
+					miso += 15;
+					if (soba <= 0) {
+						soba = 4800;
+					}
+					if (miso >= $(window).width()) {
+						tempura = true;
+						$('#unagi').css('display', 'none');
+						$('#unagi').css('left', '-400px');
+						clearInterval(ikura);
+					}
+				}, 100);
+			}
+		}
+	</script>
 
 	<p><a target='_blank' href='http://foc.askfred.net/Referee/'>Referee Ratings</a></p>
 </article>
@@ -114,44 +144,10 @@
 	<p><a target="_blank" href="https://www.youtube.com/user/USAFencing">YouTube USA Fencing Channel</a></p>
 	<p><a target="_blank" href="https://www.youtube.com/user/CyrusofChaos">YouTube CyrusofChaos</a> Collection of fencing videos</p>
 	<p><a target='_blank' href='http://www.pointcontrol.info'>Pointcontrol</a> Alternative fencing rating system</p>
-
-	<p><a target='_blank' href='https://www.14meters.com'>14meters</a> (subscription service) Tracks all your fencing results and analyzes the data</p>
-
 	<p><a target='_blank' href='https://www.fencing.net'>fencing.net</a> Lots of fencing news and information</p>
 
 	<p><a target='_blank' href='https://www.reddit.com/r/Fencing/'>fencing reddit</a> Fencing forum</p>
-
-
 </article>
-
-<div id='unagi'></div>
-
-<script>
-	var tempura = false;
-	function udon() {
-		if(!tempura) {
-			tempura = true;
-			$('#unagi').css('display', 'block');
-			var soba = 3000;
-			var miso = -280;
-			var ikura = setInterval(function() {
-				$('#unagi').css('background-position', soba + 'px');
-				soba -= 300;
-				$('#unagi').css('left', miso + 'px');
-				miso += 12;
-				if (soba <= 0) {
-					soba = 3000;
-				}
-				if (miso >= $(window).width()) {
-					tempura = false;
-					$('#unagi').css('display', 'none');
-					$('#unagi').css('left', '-280px');
-					clearInterval(ikura);
-				}
-			}, 100);
-		}
-	}
-</script>
 
 
 

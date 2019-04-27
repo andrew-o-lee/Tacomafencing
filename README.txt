@@ -1,2 +1,4 @@
-To run locally on unix:
-	php -S localhost:8000
+# Website for Metro Tacoma Fencing Club
+tacomafencing.com
+## Running Locally on Unix
+`php -S localhost:8000`  

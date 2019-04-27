@@ -4,7 +4,7 @@
 <hr>
 
 <?php
-	$access_token = '3277963626.e6edf2e.cc903f5bd8d34563a085daa6aec7ce9f';
+	$access_token = '3277963626.e6edf2e.43c3af555f9847449744d8f3859c049d';
 	
 	if (!isCached('instagram')) {
 		writeCache('instagram', file_get_contents("https://api.instagram.com/v1/users/self/media/recent/?access_token=$access_token"));

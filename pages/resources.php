@@ -6,11 +6,25 @@
 <article>
 	<p><a target='_blank' href='documents/beginnerfencersguide.pdf'>Beginner Fencers’ Guide</a> written by coach Toby Lee is available to help guide you through the sport of fencing in detail.</p>
 
+	<p><a target='_blank' href='documents/tournament-checklist.pdf'>Tournament Checklist</a> What to bring to a tournament</p>
+	
+	<p><a target='_blank' href='documents/HomeDrills2019_0304.pdf'>Home Drills</a> A parent's guide to some drills to practice at home by Coach Toby Lee</p>
+		
+	<p><a target='_blank' href='documents/FencingStripCoaching2018_0617.pdf'>Strip Coaching</a> A parent's guide to coaching your fencer at a tournament by Coach Toby Lee</p>
+			
+	<p><a target='_blank' href='documents/TLBLFencingClinicUPS2019_0407.pdf'>Fencing Clinic at University of Puget Sound 2019</a> Clinic notes including drills and games for University of Puget Sound Fencing Club by Coach Toby Lee and Coach Benjamin Lee</p>
+				
 	<p><a target='_blank' href='documents/volunteer-hour-record.pdf'>Volunteer Hour Record</a> Keep track of volunteer hours and submit</p>
 
-	<p><a target='_blank' href='documents/tournament-checklist.pdf'>Tournament Checklist</a> What to bring to a tournament</p>
-
 	<p><a target='_blank' href='documents/armory.pdf'>Armory Guidelines</a></p>
+	
+	<p><a target='_blank' href='documents/PoolScoresheet.pdf'>USA Fencing Pool Score Sheet</a> Pool Score Sheet</p>
+		
+	<p><a target='_blank' href='documents/TeamRelayScoresheet.pdf'>USA Fencing Team Score Sheet</a> Team Relay Score Sheet</p>
+			
+			
+			
+			
 </article>
 
 <img src='images/cover/foilbenjamin.jpg' class='cover-photo'>

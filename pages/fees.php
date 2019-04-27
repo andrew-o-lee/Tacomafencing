@@ -22,7 +22,7 @@
 					"Membership required for classes, private lessons, and open fencing"
 				),
 				array(
-					"Beginning Foil",
+					"Beginning Youth Foil",
 					"<ul>
 						<li>First month is $100</li>
 						<li>After first month, $60 per month plus MTFC membership ($125 total)</li>
@@ -30,7 +30,14 @@
 					"Tuesdays <time>5:30 PM</time> - <time>6:30 PM</time>"
 				),
 				array(
-					"Beginning Epee",
+					"Beginning Youth Epee",
+					"<ul>
+						<li>$90 per month plus MTFC membership ($155 total)</li>
+					</ul>",
+					"Mondays and Fridays <time>4:00 PM</time> - <time>5:00 PM</time>"
+				),
+				array(
+					"Beginning Teen and Adult Epee",
 					"<ul>
 						<li>First month is $100</li>
 						<li>After first month, $60 per month plus MTFC membership ($125 total)</li>
@@ -54,17 +61,23 @@
 				),
 				array(
 					"Competitive Foil",
-					"$165",
+					"<ul>
+						<li>$165 per month plus MTFC membership </li>
+					</ul>",
 					"Mondays and Thursdays <time>5:00 PM</time> - <time>6:30 PM</time>"
 				),
 				array(
 					"Elite Foil",
-					"$245",
+					"<ul>
+						<li>$245 per month plus MTFC membership </li>
+					</ul>",
 					"Mondays, Wednesdays, and Fridays <time>6:00 PM</time> - <time>8:00 PM</time>"
 				),
 				array(
 					"Elite Epee",
-					"$200",
+					"<ul>
+						<li>$200 per month plus MTFC membership </li>
+					</ul>",
 					"Fridays <time>6:00 PM</time> - <time>8:00 PM</time> and Sundays <time>8:45 AM </time> - <time>10:45 AM</time>"
 				),
 				array(

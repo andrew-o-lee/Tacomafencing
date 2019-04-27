@@ -37,6 +37,9 @@
 			}
 			echo "<div class='profile clearfix col-lg'>";
 			if ($person['quesadilla']) {
+				if ($person['burrito']) {
+					
+				}
 				echo 
 					"<script>var chalupa$k = document.createElement('audio'); chalupa$k.src = 'images/portraits/taco/$person[burrito]'; enchilada$k = document.createElement('img'); enchilada$k.src = 'images/portraits/taco/$person[quesadilla]'; function tortilla$k(obj) {chalupa$k.play(); obj.src = enchilada$k.src; setTimeout(function() {obj.src = 'images/portraits/$person[image]';}, chalupa$k.duration * 1000);}</script>";
 				echo "<img id='profilePhoto$k' src='images/loading.gif' onclick='tortilla$k(this)'>";
@@ -46,11 +49,14 @@
 			echo "<article><p>$person[bio]</p></article>";
 			echo "</div>";
 			echo "<script>\$(function() {\$.ajax({url: 'images/portraits/$person[image]'}).done(function() {\$('#profilePhoto$k').hide(); \$('#profilePhoto$k').attr('src', 'images/portraits/$person[image]'); \$('#profilePhoto$k').fadeIn(400);});});</script>";
-			if ($i % $profiles_per_row == $profiles_per_row - 1) {
+			$i++;
+			$k++;
+			if ($i % $profiles_per_row == 0) {
 				echo "</div>";
 			}
-			$k++;
-			$i++;
+		}
+		if ($i % $profiles_per_row != 0) {
+			echo "</div>";
 		}
 	}
 
